@@ -1,0 +1,14 @@
+type departmentOBJ = {
+  "subDepartment": string,
+  "departmentId": number,
+}
+
+//JavaScript function
+function employeeDetails(name, id, department ){
+  console.log ( "print employee details" + name, id, department as departmentOBJ );
+}
+
+//Defiing the javascript function with typescript
+function employeeDetailsTS(name:string, id: number, department:departmentOBJ) {
+  console.log("print employee details"+ name, id, department);
+}
