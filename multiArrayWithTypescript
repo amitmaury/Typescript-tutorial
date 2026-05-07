@@ -1,0 +1,70 @@
+//Assignnmet -1
+
+//id will excpet number and string both
+//Final output will be number and string both
+
+//output value: 123
+//output value: "abc"
+
+function printID(id: string | number): string | number{
+  console.log(id);
+return id;
+}
+
+printID("abc")
+
+// // //Assignnmet -2
+const order: orderOBJ = {
+    id: 123,
+    product: "Laptop",
+    quantity: 2
+}
+
+
+// this function will accept order object and return the array 
+//ouput [123, "Laptop", 2]
+type orderOBJ ={
+   id: number;
+   product: string,
+   quantity: number,
+}
+
+
+const orderData = (order: orderOBJ )=>{
+let orderArr = [] ;
+orderArr = [order.id, order.product, order.quantity];
+return orderArr;
+}
+
+const orderValues = orderData(order)
+
+console.log(orderData);
+
+
+
+//Assignnmet -3
+const personData: personArr = [{
+    name: "John",
+    age: 30,
+    city: "New York"    
+}]
+
+type personDataOBJ = {
+  name: string,
+  age: number,
+  city: string,
+}
+
+type personArr = personDataOBJ[];
+
+// this function will accept personData array and return the array of name, age and city
+//output [["John", 30, "New York"]]
+const personInfo = (personData: personArr)=>{ 
+  console.log(personData);
+  let personFirstObject = personData[0];
+// const arr = [];
+const arr2: (string | number) [] = [personFirstObject.name, personFirstObject.age, personFirstObject.city];
+const finalArr: (string | number)[][] = [arr2];
+}
+
+const personInfo1 = personInfo(personData)
