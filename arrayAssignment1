@@ -1,0 +1,152 @@
+const devices: deviceArr =
+{
+  "success": true,
+  "data": [
+    {
+      "planId": 101,
+      "planName": "Basic 5G",
+      "price": 299,
+      "currency": "INR",
+      "validity": 28,
+      "features": ["5GB Data", "100 SMS", "Unlimited Calls"],
+      "isPopular": true,
+      "category": "prepaid"
+    },
+    {
+      "planId": 102,
+      "planName": "Pro Max",
+      "price": 599,
+      "currency": "INR",
+      "validity": 56,
+      "features": ["50GB Data", "Unlimited SMS", "Unlimited Calls"],
+      "isPopular": false,
+      "category": "postpaid"
+    }
+  ]
+}
+
+type deviceDataOBJ = {
+      "planId": number,
+      "planName": string,
+      "price": number,
+      "currency": string,
+      "validity": number,
+      "features": string[],
+      "isPopular": boolean,
+      "category": string,
+}
+
+
+type deviceArr = {
+  "success": boolean,
+    "data": deviceDataOBJ[];
+}
+//////////
+
+const engineers: engineerOBJ = 
+{
+  "status": "success",
+  "data": {
+    "id": 101,
+    "username": "tester_01",
+    "email": "dev.test@example.com",
+    "profile": {
+      "name": "Jane Doe",
+      "role": "Frontend Developer",
+      "active": true
+    },
+    "tags": ["beta", "admin", "test-user"]
+  },
+  "metadata": {
+    "timestamp": "2024-05-20T14:30:00Z",
+    "server_id": "us-east-1"
+  }
+}
+
+
+type profileOBJ = {
+  "name": string,
+  "role": string,
+  "active":  boolean,
+}
+
+type dataOBJ = {
+  "id": number,
+  "username": string,
+  "email": string,
+  "profile": profileOBJ,
+  "tags": string[],
+}
+
+type engineerOBJ ={
+   "status": string,
+   "data": dataOBJ,
+    "metadata": {
+      "timestamp": string,
+      "server_id": string,
+    }
+}
+
+
+const keyboards: keyboardDataOBJ = 
+{
+  "success": true,
+  "data": {
+    "orderId": "ORD-2045",
+    "placedAt": "2024-05-01T10:30:00Z",
+    "status": "out_for_delivery",
+    "customer": {
+      "id": 9,
+      "name": "Amit Shah",
+      "phone": "+91-9876543210"
+    },
+    "items": [
+      {
+        "productId": "P001",
+        "productName": "Mechanical Keyboard",
+        "quantity": 1,
+        "pricePerUnit": 3500
+      },
+      {
+        "productId": "P002",
+        "productName": "Mouse Pad XL",
+        "quantity": 2,
+        "pricePerUnit": 499
+      }
+    ],
+    "payment": {
+      "method": "upi",
+      "status": "paid",
+      "totalAmount": 4498
+    }
+  }
+}
+
+type itemsOBJ = {
+  "productId": string,
+  "productName": string,
+  "quantity": number,
+  "pricePerUnit": number,
+}
+
+type paymentOBJ = {
+  "method": string,
+  "status": string,
+  "totalAmount": number,
+}
+
+type keyboardDataOBJ =  {
+  "success": boolean,
+    "data": {
+   "orderId": string,
+   "placedAt": string,
+   "status" : string,
+   "customer": {
+    "id" : number,
+    "name": string,
+    "phone": string,
+   }
+   "items": itemsOBJ[],
+   "payment": paymentOBJ,
+    }
+}
