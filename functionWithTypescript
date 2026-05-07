@@ -1,0 +1,33 @@
+type departmentOBJ = {
+  "subDepartment": string,
+  "departmentId": number,
+}
+
+//First assignment
+function employeeDetailsTS(name:string, id: number, department:departmentOBJ):string {
+  // console.log("print employee details"+ name, id, department);
+  // let personName: string = "rajani";
+  let inr: number = 12;
+   let usd: number = 90;
+ let amount: number = inr * usd;
+ let printData: string = "Amount is"+amount;
+  // console.log("print name"+ printData);
+  return printData;
+}
+let departmentOBJ = {subDepartment: "IT department", departmentId: 3}
+const rajaniEmployeeData = employeeDetailsTS("rajani", 3, departmentOBJ );
+console.log("rajani data"+ rajaniEmployeeData );
+
+
+//2nd Assignment
+//output- //"Ajay has employee id 11 and belong to Math department 4"
+
+function employeeDetailsNew(name:string, id: number, department:departmentOBJ):string {
+  let employeeInfo: string;
+  employeeInfo = name+" has employee id "+id+ " and belong to "+department.subDepartment+" department "+department.departmentId;
+ return employeeInfo;
+}
+
+const ajayEmployeeInfo = employeeDetailsNew("Ajay", 11, {subDepartment: "Math", departmentId: 4 });
+console.log(ajayEmployeeInfo);
+
