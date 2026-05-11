@@ -1,0 +1,62 @@
+interface User {
+  id?: number,
+  name?: string,
+}
+
+// Generics is a place holder where it acceptnce data any for example, string, object, array or any other data data object.
+
+
+interface ApiResponse<T> {
+  status: number,
+  success: string,
+  data: T,
+}
+
+const userObj = {
+  id: 3,
+  name: "preetam",
+}
+
+
+const apiResponsaData: ApiResponse<User>  = {
+  status: 200,
+  success: "OK",
+  data: userObj,
+}
+
+interface ProductList{
+   proudctId: number,
+   productName: string,
+}
+
+
+const prodcutOBJ : ProductList = {
+  proudctId: 130,
+  productName: "samsung device",
+}
+
+// const apiResponseProductData: ApiResponse<ProductList> {
+//    productId: 130,
+//   productName: "samsung device",
+//   data: prodcutOBJ,
+
+// }
+
+// interface ClassDetails extends user {
+//   room: number | string,
+//   subject: string,
+// }
+
+
+
+// Gernerics and format <T>
+
+function detailsClass(apiResponseDataOne: ApiResponse<User>){
+  console.log("printing the response Data status  "+ 
+  + apiResponseDataOne.status + " success message " + apiResponseDataOne.success + " data "+ apiResponseDataOne.data );
+  return apiResponseDataOne;
+}
+
+
+
+detailsClass(apiResponsaData);
