@@ -1,0 +1,47 @@
+interface User {
+  id?: number,
+  name?: string,
+}
+
+// Generics is a place holder where it acceptnce data any for example, string, object, array or any other data data object.
+
+
+const  authResponse = {
+  "success": false,
+  "error": {
+    "code": 401,
+    "message": "Invalid credentials provided."
+  }
+}
+
+interface FailureAuthResponse<T> {
+  success: boolean,
+  error: {
+    code: number,
+    message: T,
+  }
+}
+
+
+const successAuthResponse = {
+  "success": true,
+  "token": "abc123",
+  "user":{
+    name: "ABC",
+    email:"abc@gmail.com"
+  }
+}
+
+interface SuccessAuthResponse {
+  success: boolean,
+  token : string,
+  user : {
+    name: string,
+    email: string,
+  }
+}
+
+
+type FinalAuth = SuccessAuthResponse | FailureAuthResponse<string>
+
+
