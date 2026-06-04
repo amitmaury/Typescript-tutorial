@@ -5,7 +5,7 @@ interface UserProfile  {
   name: string,
   address: string,
 }
-
+//using omit to just make sure that, it will skip the id from UserPRofile interface.
 type PrintProfile = Omit<UserProfile, "id">;
 
 // When omit being called in the memory omit behaves as omitting the id and rest of the keys will be being printed. like below
