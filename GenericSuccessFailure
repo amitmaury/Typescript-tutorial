@@ -4,7 +4,7 @@ interface User {
 }
 
 // Generics is a place holder where it acceptnce data any for example, string, object, array or any other data data object.
-
+//auth response example with success and failure scenerio
 
 const  authResponse = {
   "success": false,
