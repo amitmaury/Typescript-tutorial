@@ -5,7 +5,7 @@ interface User {
 
 // Generics is a place holder where it acceptnce data any for example, string, object, array or any other data data object.
 
-
+//adding generics for the T where its dynamic
 interface ApiResponse<T> {
   status: number,
   success: string,
